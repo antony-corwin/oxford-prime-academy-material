@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeList, ThemeService } from '@app/@core/services/theme';
+import {ActivatedRoute} from '@angular/router';
+
 import { Path } from '@core/structs';
 
 @Component({
@@ -8,13 +9,9 @@ import { Path } from '@core/structs';
 })
 export class HomePage implements OnInit {
   path = Path;
-  theme = ThemeList;
 
-  constructor(private themeService: ThemeService) {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
-
-  onClickChangeTheme(theme: ThemeList): void {
-    this.themeService.setTheme(theme);
+  ngOnInit(): void {
   }
 }

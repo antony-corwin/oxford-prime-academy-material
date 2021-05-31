@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-boilerplate": {
+    "oxford-prime-academy": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-boilerplate",
+            "outputPath": "dist/oxford-prime-academy",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,7 +73,7 @@
               "browserTarget": "test:build:production"
             },
             "development": {
-              "browserTarget": "angular-boilerplate:build:development"
+              "browserTarget": "oxford-prime-academy:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -97,42 +97,42 @@
         "e2e": {
           "builder": "@briebug/cypress-schematic:cypress",
           "options": {
-            "devServerTarget": "angular-boilerplate:serve",
+            "devServerTarget": "oxford-prime-academy:serve",
             "watch": true,
             "headless": false
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-boilerplate:serve:production"
+              "devServerTarget": "oxford-prime-academy:serve:production"
             }
           }
         },
         "cypress-run": {
           "builder": "@briebug/cypress-schematic:cypress",
           "options": {
-            "devServerTarget": "angular-boilerplate:serve"
+            "devServerTarget": "oxford-prime-academy:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-boilerplate:serve:production"
+              "devServerTarget": "oxford-prime-academy:serve:production"
             }
           }
         },
         "cypress-open": {
           "builder": "@briebug/cypress-schematic:cypress",
           "options": {
-            "devServerTarget": "angular-boilerplate:serve",
+            "devServerTarget": "oxford-prime-academy:serve",
             "watch": true,
             "headless": false
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-boilerplate:serve:production"
+              "devServerTarget": "oxford-prime-academy:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-boilerplate"
+  "defaultProject": "oxford-prime-academy"
 }

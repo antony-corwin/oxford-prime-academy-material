@@ -4,9 +4,25 @@ import { Path } from '@app/@core/structs';
 
 export const PUBLIC_ROUTES: Routes = [
   {
+    path: Path.Online,
+    loadChildren: () =>
+      import('@app/pages/public/online/online.module').then((m) => m.OnlineModule),
+  },
+  {
     path: Path.Home,
     loadChildren: () =>
       import('@app/pages/public/home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: Path.Info,
+    loadChildren: () =>
+      import('@app/pages/public/info/info.module').then((m) => m.InfoModule),
+  },
+  ////////////////////////////////////
+  {
+    path: Path.Contact,
+    loadChildren: () =>
+      import('@app/pages/public/contact/contact.module').then((m) => m.ContactModule),
   },
   {
     path: '',

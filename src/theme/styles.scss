@@ -1,16 +1,5 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import '01-base/font.scss';
+@import '01-base/document.scss';
+@import '01-base/headings.scss';
 
-@layer base {
-  @import '01-base/font.scss';
-  @import '01-base/document.scss';
-  @import '01-base/headings.scss';
-}
-
-@layer components {
-  @import '02-components/link.scss';
-}
-
-@layer utilities {
-}
+@import '02-components/link.scss';

@@ -1,12 +1,10 @@
-a.link {
-  @apply inline-block;
-  @apply font-semibold;
-  @apply text-sm;
-  @apply text-red-400;
+a {
+  color: $clr-base;
 
-  &:hover,
-  &:active,
-  &:focus {
-    @apply underline;
+  &:visited {
+    color: $clr-base;
+  }
+  &:hover {
+    font-weight: bold;
   }
 }

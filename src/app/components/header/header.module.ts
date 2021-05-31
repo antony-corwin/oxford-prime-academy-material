@@ -8,4 +8,4 @@ import { HeaderComponent } from './header.component';
   imports: [CommonModule, RouterModule],
   exports: [HeaderComponent],
 })
-export class HeaderModule {}
+export class HeaderModule{}

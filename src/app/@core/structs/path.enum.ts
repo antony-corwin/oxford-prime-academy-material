@@ -1,7 +1,17 @@
 export enum Path {
   // General containers
+  Online = 'online',
   Home = '',
+  Info = 'info',
+  SchoolLife = 'school-life',
+  Contact = 'contact',
   NotFound = '404',
+
+  // Info children
+  AboutUs = 'about-us',
+  Curriculum = 'curriculum',
+  Admissions = 'admissions',
+  Faq = 'faq',
 
   // Auth
   SignIn = 'sign-in',

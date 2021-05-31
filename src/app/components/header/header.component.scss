@@ -1,0 +1,79 @@
+$clr-base: #545454;
+$clr-accent: #008000;
+
+
+
+.navbar {
+
+  &-brand {
+    a {
+      display: inline-block;
+      transition: background-image 0.5s ease-in-out;
+      background-image: url("../../../assets/img/opa_logo.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-y: center;
+      width: 200px;
+      height: 62px;
+    }
+  }
+
+  .active {
+    font-weight: bold;
+  }
+
+  &-main {
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    nav {
+      display: inline-block;
+      a {
+        margin-left: 3rem;
+        font-size: .825rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .25em;
+
+        &:first-child {
+          color: $clr-accent;
+        }
+      }
+    }
+
+    .lang {
+      margin-left: 3rem;
+      display: inline-block;
+      text-transform: uppercase;
+
+      &:hover {
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-secondary {
+    padding: 0.5rem 0;
+    margin-bottom: 3rem;
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 4rem;
+
+      a {
+        margin-left: 3rem;
+        font-size: .825rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .25em;
+      }
+    }
+  }
+}
+
+

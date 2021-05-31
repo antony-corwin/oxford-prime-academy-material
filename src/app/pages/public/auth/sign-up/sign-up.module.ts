@@ -12,7 +12,7 @@ import { SignUpPage } from './sign-up.page';
         path: '',
         component: SignUpPage,
         data: {
-          title: 'Join to Angular Boilerplate',
+          title: 'Join to Oxford Prime Academy',
           description:
             'Angular starter for enterprise-grade front-end projects, built under a clean architecture that helps to scale and maintain a fast workflow.',
           robots: 'index, follow',
