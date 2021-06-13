@@ -1,10 +1,12 @@
-<div class="container">
-  <app-layout *ngIf="isLoggedIn$ | async; else notAuthorized">
+<div>
+  <ng-container *ngIf="isLoggedIn$ | async; else notAuthorized">
     <router-outlet></router-outlet>
-  </app-layout>
+  </ng-container>
 
   <ng-template #notAuthorized>
-    <router-outlet></router-outlet>
+    <app-layout>
+      <router-outlet></router-outlet>
+    </app-layout>
   </ng-template>
 
   <app-scroll-top></app-scroll-top>

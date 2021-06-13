@@ -1,0 +1,23 @@
+<div class="sidenav">
+  <div>
+    <a [routerLink]="['/' + path.Dashboard]" routerLinkActive="active">
+      <img class="logo" src="./../../../assets/icon/sidenav/logo.svg" alt="logo">
+    </a>
+    <mat-divider class="sidenav-divider"></mat-divider>
+    <ul class="sidenav-menu">
+      <ng-container *ngFor="let navItem of navItems">
+        <li>
+          <a [routerLink]="[ '/' + navItem.link]">
+            <img src="./../../../assets/icon/sidenav/{{navItem.icon}}.svg" alt="{{navItem.icon}}">
+            <div>{{navItem.label}}</div>
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  <div>
+    <a [routerLink]="['/' + path.Dashboard]">
+      <img src="./../../../assets/icon/sidenav/settings.svg" alt="settings">
+    </a>
+  </div>
+</div>
