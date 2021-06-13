@@ -1,26 +1,25 @@
-
+@use '~@angular/material' as mat;
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core();
+@include mat.core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$oxford-prime-academy-primary: mat-palette($mat-indigo);
-$oxford-prime-academy-accent: mat-palette($mat-pink, A200, A100, A400);
+$oxford-prime-academy-primary: mat.define-palette(mat.$indigo-palette);
+$oxford-prime-academy-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$oxford-prime-academy-warn: mat-palette($mat-red);
+$oxford-prime-academy-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$oxford-prime-academy-theme: mat-light-theme((
+$oxford-prime-academy-theme: mat.define-light-theme((
   color: (
     primary: $oxford-prime-academy-primary,
     accent: $oxford-prime-academy-accent,
@@ -31,13 +30,16 @@ $oxford-prime-academy-theme: mat-light-theme((
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($oxford-prime-academy-theme);
+@include mat.all-component-themes($oxford-prime-academy-theme);
+
 
 @import '01-base/font.scss';
 @import '01-base/document.scss';
 @import '01-base/headings.scss';
 
 @import '02-components/link.scss';
+html, body {
+  height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
