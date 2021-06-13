@@ -1,19 +1,5 @@
-// import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-//
-// @Component({
-//   selector: 'app-scroll-top',
-//   templateUrl: './scroll-top.component.html',
-//   styleUrls: ['./scroll-top.component.scss'],
-//   changeDetection: ChangeDetectionStrategy.OnPush,
-// })
-// export class ScrollTopComponent implements OnInit {
-//   constructor() {}
-//
-//   ngOnInit(): void {}
-// }
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-scroll-top',
@@ -23,7 +9,6 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 export class ScrollTopComponent implements OnInit {
 
   windowScrolled: boolean;
-  upIcon = faChevronUp;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
     this.windowScrolled = false;
@@ -38,12 +23,8 @@ export class ScrollTopComponent implements OnInit {
     }
   }
 
-
-
   ngOnInit() {
   }
-
-
 
   scrollToTop() {
     (function smoothscroll() {
