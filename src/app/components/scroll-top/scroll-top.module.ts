@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { HeaderComponent } from './header.component';
+import { ScrollTopComponent} from "./scroll-top.component";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 @NgModule({
-  declarations: [HeaderComponent],
-  imports: [CommonModule, RouterModule],
-  exports: [HeaderComponent],
+  declarations: [ScrollTopComponent],
+  imports: [CommonModule, FontAwesomeModule],
+  exports: [ScrollTopComponent],
 })
 export class ScrollTopModule {}
