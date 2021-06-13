@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './components/layout/layout.module';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     LayoutModule,
     RouterModule.forRoot([], {
     anchorScrolling: 'enabled'
-  })],
+  }),
+    BrowserAnimationsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
