@@ -1,0 +1,30 @@
+<header>
+  <section class="navbar-main">
+    <div class="navbar-brand">
+      <a [routerLink]="[path.Home]"></a>
+    </div>
+    <div class="navbar">
+      <nav>
+        <a [routerLink]="[path.Online]" routerLinkActive="active">online</a>
+        <a [routerLink]="[path.Home]" routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact:true}">home</a>
+        <a [routerLink]="[path.Info]" routerLinkActive="active">info</a>
+        <a [routerLink]="[path.SchoolLife]" routerLinkActive="active">school life</a>
+        <a [routerLink]="[path.Contact]" routerLinkActive="active">contact</a>
+      </nav>
+      <div *ngIf="selectedLang === 'en'" class="lang" [ngClass]="'lang-selected'" (click)="changeLang('ru')">en</div>
+      <div *ngIf="selectedLang === 'ru'" class="lang" [ngClass]="'lang-selected'" (click)="changeLang('en')">ru</div>
+    </div>
+  </section>
+
+  <section class="navbar-secondary">
+    <div class="navbar" *ngIf="currentUrl && currentUrl.includes(path.Info)">
+      <nav>
+        <a [routerLink]="[path.Info + '/' + path.AboutUs]" routerLinkActive="active">about us</a>
+        <a [routerLink]="[path.Info + '/' + path.Curriculum]" routerLinkActive="active">curriculum</a>
+        <a [routerLink]="[path.Info + '/' + path.Admissions]" routerLinkActive="active">admissions</a>
+        <a [routerLink]="[path.Info + '/' + path.Faq]" routerLinkActive="active">faq</a>
+      </nav>
+    </div>
+  </section>
+</header>

@@ -7,15 +7,15 @@
     <ul class="sidenav-menu">
       <ng-container *ngFor="let navItem of navItems">
         <li>
-          <a [routerLink]="[ '/' + navItem.link]">
-            <img src="./../../../assets/icon/sidenav/{{navItem.icon}}.svg" alt="{{navItem.icon}}">
+          <a [routerLink]="[ '/' + navItem.link]" routerLinkActive="active">
+            <img class="sidenav-item__img" src="./../../../assets/icon/sidenav/{{navItem.icon}}.svg" alt="{{navItem.icon}}">
             <div>{{navItem.label}}</div>
           </a>
         </li>
       </ng-container>
     </ul>
   </div>
-  <div>
+  <div style="margin-bottom: 30px">
     <a [routerLink]="['/' + path.Dashboard]">
       <img src="./../../../assets/icon/sidenav/settings.svg" alt="settings">
     </a>

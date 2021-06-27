@@ -14,7 +14,7 @@ export class SideNavComponent implements OnInit {
     {
       icon: 'home',
       label: 'Home',
-      link: '/'
+      link: 'dashboard'
     },
     {
       icon: 'cms',

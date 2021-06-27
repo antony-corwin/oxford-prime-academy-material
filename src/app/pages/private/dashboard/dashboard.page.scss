@@ -1,3 +1,9 @@
-.sidenav-container {
-  width: 96px;
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  background: #EDEDED;
+
+  &-main {
+    width: 100%;
+  }
 }
