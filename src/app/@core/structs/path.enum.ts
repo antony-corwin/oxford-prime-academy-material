@@ -20,6 +20,12 @@ export enum Path {
     CMS = 'cms',
     Videos = 'videos',
     Users = 'users',
+      // Users children
+      UsersList = "users-list",
+      Invitation = "invitation",
+      OnlineRequests = "online-requests",
+      Documents = "documents",
+      Archive = "archive",
     School = 'school',
     Billing = 'billing',
     Reports = 'reports',
@@ -48,6 +54,7 @@ export enum Path {
   SettingsSecurityLog = "security-log",
 
   // User
+  UsersRoute = 'users-route',
   UsersOverview = "overview",
   UsersProfile = ":username",
 }

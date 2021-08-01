@@ -1,0 +1,9 @@
+<ul class="sub-nav">
+  <ng-container *ngFor="let navItem of navItems">
+    <li [routerLinkActive]="'active'">
+      <a [routerLink]="['/' + path.Dashboard + '/' + path.Users + '/'+ navItem.link]" [routerLinkActive]="'active'">
+        <div>{{navItem.label}}</div>
+      </a>
+    </li>
+  </ng-container>
+</ul>

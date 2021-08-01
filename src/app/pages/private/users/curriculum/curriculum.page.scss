@@ -1,0 +1,10 @@
+.subject {
+  text-decoration: underline;
+  text-align: left;
+  align-self: flex-start;
+  &-area {
+    text-decoration: none;
+    text-align: left;
+    align-self: flex-start;
+  }
+}

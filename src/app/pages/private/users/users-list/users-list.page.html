@@ -1,0 +1,85 @@
+<section class="instruments">
+  <div class="search">
+    <img class="search__img" src="./assets/icon/search.svg" alt="search">
+    <input class="search__input" type="search" placeholder="Search here..." matInput (keyup)="applyFilter($event)"
+           #userSearch>
+  </div>
+  <div class="operations">
+    <mat-form-field class="filter" appearance="fill">
+      <mat-label>Filter</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let role of roles" [value]="role.value">
+          {{role.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button class="export-btn" mat-flat-button>
+      <span style="margin-right: 56px;">Export</span>
+      <img src="./assets/icon/arrow-right-r.svg" alt="export">
+    </button>
+  </div>
+</section>
+<section>
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th class="w-50" mat-header-cell *matHeaderCellDef mat-sort-header><b> #</b></th>
+      <td class="w-50" mat-cell *matCellDef="let row"> {{row.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Full name</th>
+      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email</th>
+      <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+    </ng-container>
+
+    <!-- Role Column -->
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Role</th>
+      <td mat-cell *matCellDef="let row"> {{row.role}} </td>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Status</th>
+      <td mat-cell *matCellDef="let row"> {{row.status}} </td>
+    </ng-container>
+
+    <!-- Controls Column -->
+    <ng-container matColumnDef="controls">
+      <th class="w-100" mat-header-cell *matHeaderCellDef mat-sort-header></th>
+      <td class="w-100" mat-cell *matCellDef="">
+        <div class="controls">
+          <div class="btn">
+            <img src="./assets/icon/trash.svg" alt="delete user">
+          </div>
+          <div class="btn">
+            <img src="./assets/icon/duplicate.svg" alt="copy user">
+          </div>
+          <div class="btn">
+            <img src="./assets/icon/edit.svg" alt="edit user">
+          </div>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching "{{userSearch.value}}"</td>
+    </tr>
+  </table>
+
+  <mat-paginator [pageIndex]="pageIndex"
+                 [pageSize]="pageSize"
+  ></mat-paginator>
+</section>

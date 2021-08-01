@@ -32,8 +32,8 @@ $clr-accent: #008000;
     nav {
       display: inline-block;
       a {
-        margin-left: 3rem;
-        font-size: .825rem;
+        margin-left: 5rem;
+        //font-size: 1.155rem;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: .25em;
@@ -47,7 +47,10 @@ $clr-accent: #008000;
     .lang {
       margin-left: 3rem;
       display: inline-block;
+      letter-spacing: .25em;
       text-transform: uppercase;
+      color: #545454;
+      //font-size: 1.155rem;
 
       &:hover {
         font-weight: bold;
@@ -66,8 +69,8 @@ $clr-accent: #008000;
       padding-right: 4rem;
 
       a {
-        margin-left: 3rem;
-        font-size: .825rem;
+        margin-left: 5rem;
+        //font-size: 1.155rem;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: .25em;

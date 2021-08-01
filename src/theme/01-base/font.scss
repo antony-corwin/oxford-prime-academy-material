@@ -15,10 +15,10 @@ $clr-accent: #008000;
   font-display: swap;
 }
 
-html {
-  font-family: 'TSTAR PRO', 'Roboto', sans-serif;
+* {
+  font-family: 'TSTAR PRO', 'Roboto', sans-serif !important;
   //font-size: 10px;
-  font-size: 14px;
+  //font-size: 14px;
   color: $clr-base;
 }
 

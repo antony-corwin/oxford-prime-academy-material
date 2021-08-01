@@ -10,8 +10,21 @@ export const PRIVATE_ROUTES: Routes = [
       {
         path: Path.Dashboard,
         loadChildren: () =>
-          import('@app/pages/private/dashboard/dashboard.module').then(
-            (m) => m.DashboardModule,
+          import('@app/pages/private/admin-dashboard/admin-dashboard.module').then(
+            (m) => m.AdminDashboardModule,
+          ),
+      },
+    ],
+  },
+  {
+    path: Path.Users,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: Path.Dashboard,
+        loadChildren: () =>
+          import('@app/pages/private/admin-dashboard/admin-dashboard.module').then(
+            (m) => m.AdminDashboardModule,
           ),
       },
     ],
@@ -72,7 +85,7 @@ export const PRIVATE_ROUTES: Routes = [
     ],
   },
   {
-    path: Path.Users,
+    path: Path.UsersRoute,
     canActivate: [AuthGuard],
     children: [
       {
