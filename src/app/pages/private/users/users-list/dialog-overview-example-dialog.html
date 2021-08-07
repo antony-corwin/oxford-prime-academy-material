@@ -1,0 +1,16 @@
+<h1 mat-dialog-title style="font-weight: bold;">Choose data for export</h1>
+<div mat-dialog-content>
+    <p>
+      <mat-checkbox [ngModel]="data.animal">Lorem ipsum</mat-checkbox>
+    </p>
+    <p>
+      <mat-checkbox [ngModel]="data.animal">Lorem ipsum</mat-checkbox>
+    </p>
+    <p>
+      <mat-checkbox [ngModel]="data.animal">Lorem ipsum</mat-checkbox>
+    </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" [mat-dialog-close]="data.animal" cdkFocusInitial
+  style="width: 72px;height: 48px;background: #000;color: #fff;font-weight: bold;">Done</button>
+</div>

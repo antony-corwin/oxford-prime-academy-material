@@ -5,6 +5,7 @@
            #userSearch>
   </div>
   <div class="operations">
+
     <mat-form-field class="filter" appearance="fill">
       <mat-label>Filter</mat-label>
       <mat-select>
@@ -13,10 +14,12 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <button class="export-btn" mat-flat-button>
+
+    <button class="export-btn" (click)="openDialog()" mat-flat-button>
       <span style="margin-right: 56px;">Export</span>
       <img src="./assets/icon/arrow-right-r.svg" alt="export">
     </button>
+
   </div>
 </section>
 <section>
